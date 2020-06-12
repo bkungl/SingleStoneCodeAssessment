@@ -1,0 +1,16 @@
+.bodyContainer {
+    width: 100%;
+
+    background-color: whitesmoke;
+
+
+    /*temporary*/
+    min-height: 150px;
+}
+
+.header {
+
+    /*align-content: center;*/
+    padding-top: 20px;
+    text-align: center;
+}

@@ -11,5 +11,11 @@ export class BodyComponent implements OnInit {
 
   ngOnInit(): void {
   }
+    
+    
+    //global variables for testing:
+    number = 1;
+    title = "Fill Out A Profile";
+    
 
 }
