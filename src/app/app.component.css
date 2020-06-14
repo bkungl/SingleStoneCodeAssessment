@@ -1,5 +1,6 @@
 .bodyContainer {
     height: 100%;
+    min-width: 320px;
 }
 
 .nav {
@@ -27,7 +28,7 @@
     /*for text*/
     color: whitesmoke;
 
-    padding-top: 30%;
+    padding-top: 20%;
     padding-left: 10%;
     padding-right: 20%;
 }

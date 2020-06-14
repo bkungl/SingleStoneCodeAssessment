@@ -6,6 +6,8 @@
 
     /*temporary*/
     min-height: 150px;
+
+    padding-bottom: 50px;
 }
 
 .header {
@@ -13,4 +15,40 @@
     /*align-content: center;*/
     padding-top: 20px;
     text-align: center;
+}
+
+.holdCards {
+    max-width: 100%;
+    padding-left: 10%;
+}
+
+/*TODO MAKE RESPONSIVE COLLAPSE*/
+.contentCard {
+    width: 20%;
+    text-align: center;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.col {
+    width: 100%;
+}
+
+.fourth {
+    display: inline-block;
+    width: 15%;
+}
+
+h1 {
+    font-family: "lotoBold", arial, sans-serif;
+}
+
+hr {
+    border-top: 3px solid turquoise;
+    max-width: 40px;
+    margin-top: -15px;
+    background-color: #ccc;
+    border-left: none;
+    border-right: none;
+
 }
