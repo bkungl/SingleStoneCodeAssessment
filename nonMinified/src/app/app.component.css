@@ -9,15 +9,9 @@
     background-color: rgb(40, 40, 40);
 }
 
-/*w3 schools*/
 .jumboImage {
-    /* The image used */
     background-image: url("../assets/photo-couch.jpg");
-
-    /* Full height */
     height: 100%;
-
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,9 +19,7 @@
 }
 
 .jumboImageText {
-    /*for text*/
     color: whitesmoke;
-
     padding-top: 20%;
     padding-left: 10%;
     padding-right: 20%;
@@ -50,13 +42,8 @@
     padding-right: 20px;
     border-radius: 60px;
     border-style: hidden;
-
     font-family: "latoBold", "arial", sans-serif;
-
     cursor: pointer;
-
-
-    /* transition */
     transition: 1s;
 }
 
@@ -69,7 +56,6 @@
 }
 
 .tight {
-
     margin-top: -5px;
     margin-bottom: -5px;
 }
