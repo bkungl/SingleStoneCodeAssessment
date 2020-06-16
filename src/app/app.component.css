@@ -52,10 +52,33 @@
     border-style: hidden;
 
     font-family: "latoBold", "arial", sans-serif;
+
+    cursor: pointer;
+
+
+    /* transition */
+    transition: 1s;
+}
+
+.startBtn:hover {
+    opacity: .5
+}
+
+.startBtn:active {
+    transform: translateY(40px);
 }
 
 .tight {
 
     margin-top: -5px;
     margin-bottom: -5px;
+}
+
+@media screen and (max-width: 425px) {
+    .startBtn {
+        margin-left: 25%;
+        margin-right: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 }
