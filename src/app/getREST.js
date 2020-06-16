@@ -1,46 +1,31 @@
-function test() {
-    alert("load");
-}
+/*
+    This file is the "vanilla" JS implementation instead of using Typescript (this file is called in the TS file for the component holding How it Works)
+    Methods:
+        - getMostRecentVC: get the most recent effective date
+        - getData: Controller function that makes request to REST api and creates HTML elements to inject to body.component.html
+            - contains a built in sort function to sort the steps by number
+*/
 
-function orderContent(request) {
 
-}
 
+//this method gets the most recent effective date
 /*for completions sake, make this future proof by making sure the data is within the certain date or else fire error...*/
 function getMostRecentVC(content) {
     var index = 0;
     var date = content.versionContent[0].date;
-    //console.log(content.versionContent);
     for (i = 0; i < content.versionContent.length; i++) {
-        //console.log(content.versionContent[i].title);
         if (content.versionContent[i].date > date) {
             date = content.versionContent[i].date;
             index = i;
         }
     }
-
-    //console.log(content.versionContent[index].title);
     return index;
 }
 
 //url is https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge
 //get data:
 function getData() {
-
-
     const holdCards = document.getElementById('holdCards');
-    //holdCards;
-
-    //holdCards.setAttribute('class', 'holdCards');
-
-    /*
-    const contentCard = document.getElementById('card');
-    contentCard.setAttribute('class', ' content');
-    contentCard.setAttribute('class', 'fourth ');
-*/
-    //  app.appendChild(contentCard);
-
-
 
     var request = new XMLHttpRequest();
     var data;
@@ -49,22 +34,22 @@ function getData() {
         //access data
         data = JSON.parse(this.response)
         if (request.status >= 200 && request.status < 400) {
+            //simple compare
             data.sort(function (a, b) {
                 return a.stepNumber.localeCompare(b.stepNumber);
             });
-            //console.log(data);
             data.forEach(step => {
 
+                //get most recent index from data
                 index = getMostRecentVC(step);
-                //TODO now use step.versionContent[index]
+
+                //avoid copying data by just inserting HTML w/ attributes
                 const card = document.createElement('div');
-                //card.setAttribute('class', 'contentCard');
                 card.setAttribute('class', 'contentCard');
 
                 const divHead = document.createElement('div');
                 divHead.setAttribute('class', 'cardHead');
 
-                //console.log(step.versionContent[index]);
                 const h1 = document.createElement('h1');
 
                 h1.textContent = "0" + step.stepNumber;
@@ -73,14 +58,13 @@ function getData() {
 
                 divHead.appendChild(h1);
 
-
                 const divTitle = document.createElement('div');
                 divTitle.setAttribute('class', 'cardTitle');
 
-                const h4 = document.createElement('p');
-                h4.textContent = step.versionContent[index].title;
+                const headp = document.createElement('p');
+                headp.textContent = step.versionContent[index].title;
 
-                divTitle.appendChild(h4);
+                divTitle.appendChild(headp);
 
                 const divBody = document.createElement('div');
                 divBody.setAttribute('class', 'cardBody');
@@ -88,19 +72,12 @@ function getData() {
                 const p = document.createElement('p');
                 p.textContent = step.versionContent[index].body;
 
+                //final appends
                 divBody.appendChild(p);
-
-
-
                 card.appendChild(divHead);
                 card.appendChild(hr);
                 card.appendChild(divTitle);
                 card.appendChild(divBody);
-
-                //console.log(holdCards);
-
-                //console.log(card);
-
                 holdCards.appendChild(card);
 
             })
