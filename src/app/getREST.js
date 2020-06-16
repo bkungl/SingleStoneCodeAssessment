@@ -59,7 +59,7 @@ function getData() {
                 //TODO now use step.versionContent[index]
                 const card = document.createElement('div');
                 //card.setAttribute('class', 'contentCard');
-                card.setAttribute('class', 'contentCard fourth');
+                card.setAttribute('class', 'contentCard');
 
                 const divHead = document.createElement('div');
                 divHead.setAttribute('class', 'cardHead');
@@ -77,10 +77,10 @@ function getData() {
                 const divTitle = document.createElement('div');
                 divTitle.setAttribute('class', 'cardTitle');
 
-                const h3 = document.createElement('h3');
-                h3.textContent = step.versionContent[index].title;
+                const h4 = document.createElement('p');
+                h4.textContent = step.versionContent[index].title;
 
-                divTitle.appendChild(h3);
+                divTitle.appendChild(h4);
 
                 const divBody = document.createElement('div');
                 divBody.setAttribute('class', 'cardBody');

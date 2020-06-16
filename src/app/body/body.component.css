@@ -1,7 +1,7 @@
 .bodyContainer {
     width: 100%;
 
-    background-color: whitesmoke;
+    background-color: #E8E8E8;
 
 
     /*temporary*/
@@ -20,24 +20,21 @@
 .holdCards {
     max-width: 100%;
     padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*TODO MAKE RESPONSIVE COLLAPSE*/
 .contentCard {
     width: 20%;
     text-align: center;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
 }
 
 .col {
     width: 100%;
 }
 
-.fourth {
-    display: inline-block;
-    width: 15%;
-}
+
 
 h1 {
     font-family: "lotoBold", arial, sans-serif;
@@ -50,5 +47,47 @@ hr {
     background-color: #ccc;
     border-left: none;
     border-right: none;
+
+}
+
+.cardTitle {
+    min-height: 30px;
+    font-weight: bold;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.cardBody {
+    margin-top: -20px;
+}
+
+
+@media screen and (min-width: 769px) {
+    .holdCards {
+        margin-right: 10%;
+    }
+
+    .contentCard {
+        margin: 0 auto;
+        min-width: 20%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contentCard {
+        margin: 0 auto;
+        min-width: 40%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contentCard {
+        margin: 0 auto;
+        min-width: 80%;
+        margin-right: 15%;
+    }
+
+
 
 }
