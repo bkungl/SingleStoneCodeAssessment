@@ -12,8 +12,13 @@ There is both a minified version as well as a non-minified, human-viewable code 
 ## First Time Setup
 Clone/download repository to a folder. In the minified file directory, run the command `npm install` to download the node modules required to run an Angular project. Then, to see a dev build, use the following commands. NOTE: This will take longer than normal to run a development server. If this project was to be deployed to production this would be a different case. 
 
-## Development server
+## Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Screenshots of Final Development
+Landing: ![Image of landing page](https://github.com/bkungl/SingleStoneCodeAssessment/blob/master/Annotation%202020-06-16%20211210.png)
+
+How it Works: ![Image of How It Works](https://github.com/bkungl/SingleStoneCodeAssessment/blob/master/Annotation%202020-06-16%20211226.png)
 
 
