@@ -1,6 +1,7 @@
 # SingleStone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+It is a responsively-designed Single Page Application using Angular 9. The files are constructed using HTML, CSS, and Typescript. The functions that call data from the REST api are written in JavaScript. There were no extraneous libraries or frameworks required to build this project.
 
 ## File Explanation
 There is both a minified version as well as a non-minified, human-viewable code version. Both run the same. The minified src folder is 584 KB while the non-minified is 1.53 MB.
